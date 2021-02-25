@@ -6,18 +6,22 @@
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
 				<h1 class="single-movie-title">
-
+					<%= data.original_title %> 
 				</h1>
 				
 				<h3 class="single-movie-title">
-
+					<%= data.tagline %> 
 				</h3>
 				
-
-				<img src="" />
-				
+				<% if (data.homepage) { %> 
+						<a href="<%= data.homepage %> ">
+							<img src="<%= imageUrl + data.poster_path %> " />
+						</a>
+					<% } else { %> 
+						<img src="<%= imageUrl + data.poster_path %> " />
+					<% } %> 
 				<p class="overview-header">Movie Synopsis: <span class="single-movie-overview">
-					
+					<%= data.overview %> 
 				</span></p>
 			</div>
 		</div>
@@ -39,8 +43,14 @@
         <h4 class="modal-title" id="myModalLabel">Movie Information</h4>
       </div>
       <div class="modal-body">
-
-
+				<a href="https://www.imdb.com/title/<%= data.imdb_id %>" target="_blank">Check on IMDB</a>
+				<p>USD<%= data.budget %> </p>
+				<p><%= data.revenue %> </p>
+				<p><%= data.release_date %> </p>
+				<ul><% data.production_companies.forEach(company => { %>
+					<li><%= company.name %> </li>,
+				<% }) %> 
+				</ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -10,9 +10,21 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h1></h1>
+          <h1>Now Playing</h1>
         </div>
-        <div class="col-sm-12"></div>
+        <div class="col-sm-12">
+          <% movies.forEach(movie =>{ %>
+          <div class="col-md-3 col-sm-4 poster">
+            <a href="/movie/<%= movie.id %> ">
+              <img
+                src="<%= imageUrl + movie.poster_path %> "
+                alt="<%= movie.original_title %>"
+                title="<%= movie.original_title %> "
+              />
+            </a>
+          </div>
+          <% }) %>
+        </div>
       </div>
     </div>
   </body>

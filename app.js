@@ -32,6 +32,7 @@ app.use(
         "https://fonts.gstatic.com/s/metamorphous/v11/Wnz8HA03aAXcC39ZEX5y133EOyqs.woff2",
         "https://fonts.gstatic.com/s/swankyandmoomoo/v10/flUlRrKz24IuWVI_WJYTYcqbEsMUZ3kksrnl.woff2",
       ],
+      "img-src": ["'self'", "https://image.tmdb.org/"],
     },
   })
 );
