@@ -47,9 +47,10 @@
 				<p>USD<%= data.budget %> </p>
 				<p><%= data.revenue %> </p>
 				<p><%= data.release_date %> </p>
-				<ul><% data.production_companies.forEach(company => { %>
-					<li><%= company.name %> </li>,
-				<% }) %> 
+				<ul>
+					<% data.production_companies.forEach(company => { %>
+						<li><%= company.name %> </li>,
+					<% }) %> 
 				</ul>
       </div>
       <div class="modal-footer">
